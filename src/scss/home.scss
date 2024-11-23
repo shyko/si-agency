@@ -1,0 +1,124 @@
+//====================================================================================================
+// HERO.
+.hero {
+  background-image: url("@img/hero/home_hero_background.webp");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: calc(100vw / 1.31);
+  min-height: calc(100vw / 1.31);
+  display: flex;
+  align-items: end;
+
+  // &__background {
+  //   position: absolute;
+  //   width: 100%;
+  //   height: 100%;
+  //   top: 0;
+  //   left: 0;
+  //   object-fit: cover;
+  //   object-position: top;
+  // }
+
+  &__container {
+    position: relative;
+    z-index: 2;
+    flex-grow: 1;
+
+    .flag-header {
+      padding-left: 100px;
+      @media (max-width: $mobile) {
+        padding-left: 0;
+      }
+    }
+  }
+
+  &__content {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1fr;
+    // grid-gap: 20px;
+    @media (max-width:$tablet){
+      grid-template-columns: 1fr 2fr;
+      // grid-gap: unset;
+    }
+  }
+
+  &__image {
+    // @include adaptiveValue("height", 896, 235);
+    height: calc(100vw / 1.61);
+    display: block;
+    @media (max-width:$tablet){
+      display: none;
+    }
+  }
+
+  &__image__mobile {
+    display: none;
+    height: calc(100vw / 1.67);
+    @media (max-width:$tablet){
+      display: block;
+    }
+  }
+
+  &__left-text-block {
+    align-self: end;
+    width: toRem(303);
+
+    @media (min-width:1116px){
+      width: toRem(327);
+    }
+
+    .hero__text-block-title {
+      @include adaptiveValue("font-size", 36, 16);
+      @include adaptiveValue("padding-bottom", 49, 21);
+      font-weight: 700;
+      text-transform: uppercase;
+      @media (max-width:$mobile){
+         font-weight: 800;
+      }
+    }
+
+    .hero__text-block-text {
+      @include adaptiveValue("font-size", 24, 16);
+      font-weight: 600;
+      line-height: 130%;
+    }
+
+    .button {
+      @include adaptiveValue("margin-top", 51, 20);
+      @include adaptiveValue("margin-bottom", 93, 10);
+    }
+  }
+
+  &__right-text-block {
+    align-self: center;
+    font-weight: 800;
+    @include adaptiveValue("font-size", 24, 14);
+    line-height: 130%;
+    @include adaptiveValue("width", 320, 120, 0, 991.98, 320);
+  }
+}
+.introduction-text-tablet {
+  display: none;
+  @media (max-width:$tablet){
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: toRem(30);
+
+    .hero__left-text-block {
+      align-self: center;
+      text-align: center;
+      width: toRem(285px);
+    }
+    .hero__text-block-text {
+      @media (max-width:$mobileSmall){
+         width: unset;
+         padding: 0 15px;
+      }
+    }
+  }
+}
+
+// END HERO.
+//====================================================================================================

@@ -1,0 +1,133 @@
+//====================================================================================================
+.footer {
+  background-color: $mainColor;
+  min-height: toRem(482);
+  &__container {
+  }
+  &__body {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    @include adaptiveValue("padding-top", 98, 40);
+    @include adaptiveValue("padding-bottom", 98, 40);
+    align-items: center;
+    @media (max-width: $mobile) {
+      grid-template-columns: 1fr;
+      gap: toRem(50);
+    }
+  }
+  &_column {
+    &:last-child {
+      justify-self: flex-end;
+    }
+    @media (max-width: $mobile) {
+      text-align: center;
+      &:last-child {
+        justify-self: auto;
+      }
+    }
+  }
+  &__logo {
+    @include adaptiveValue("width", 295, 205);
+  }
+  &__social {
+    display: grid;
+    justify-items: center;
+    @include adaptiveValue("gap", 81, 65);
+    padding: 0 10px;
+    text-align: center;
+  }
+  &__top-social {
+    display: flex;
+    flex-direction: column;
+    @include adaptiveValue("gap", 18, 13);
+    .telegram {
+      @include adaptiveValue("font-size", 94, 76);
+      @include adaptiveValue("width", 94, 76);
+      @include adaptiveValue("height", 94, 76);
+      color: white;
+      align-self: center;
+    }
+    .suffix-text {
+      font-size: 20px;
+      font-weight: 800;
+      color: white;
+      @media (max-width: $mobile) {
+        font-weight: 600;
+      }
+    }
+  }
+  &__bottom-social {
+    display: flex;
+    flex-direction: column;
+    @include adaptiveValue("gap", 18, 13);
+  }
+  &__menu {
+  }
+  &__contacts {
+  }
+}
+.social {
+  &__block {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    justify-content: center;
+    gap: toRem(30);
+    & > a {
+      color: white;
+      font-size: toRem(48);
+      width: toRem(48);
+      height: toRem(48);
+    }
+  }
+  &__block-suffix {
+    font-size: 20px;
+    font-weight: 800;
+    color: white;
+    @media (max-width: $mobile) {
+      font-weight: 600;
+    }
+  }
+}
+.menu {
+  &-footer {
+  }
+  &-footer__list {
+    display: flex;
+    flex-direction: column;
+    gap: toRem(30);
+    @include adaptiveValue("gap", 30, 15);
+    color: white;
+    font-size: toRem(20);
+    font-weight: 700;
+  }
+  &-footer__item {
+  }
+  &-footer__link {
+  }
+}
+.contacts {
+  &-footer {
+    display: flex;
+    flex-direction: column;
+    margin-top: toRem(52);
+    color: white;
+    @include adaptiveValue("gap", 30, 22);
+  }
+  &-footer-label {
+    font-size: toRem(20);
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  &-footer-content {
+    display: flex;
+    flex-direction: column;
+    gap: toRem(5);
+    & > div {
+      font-size: toRem(20);
+      font-weight: 700;
+    }
+  }
+  &-footer-content-item {
+  }
+}
+//====================================================================================================

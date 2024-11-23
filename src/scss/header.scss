@@ -1,0 +1,75 @@
+.header {
+  &__container {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    align-items: center;
+    @include adaptiveValue("min-height", 145, 80, 0, $maxWidth, 767.98);
+    padding-top: toRem(10);
+    padding-bottom: toRem(10);
+
+    @media (max-width: $mobile) {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+  &__logo {
+    order: 1;
+    @media (max-width: $mobile) {
+      text-align: center;
+      order: 2;
+    }
+    img {
+      @include adaptiveValue("width", 190, 140);
+    }
+  }
+  &__menu {
+    order: 2;
+    @media (max-width: $mobile) {
+      order: 1;
+
+      button {
+        z-index: 9;
+      }
+    }
+  }
+}
+.menu {
+  &__icon {
+  }
+  &__body {
+    @media (max-width: $mobile) {
+      padding: toRem(50) toRem(15) toRem(15) toRem(0);
+      z-index: 8;
+    }
+  }
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    @include adaptiveValue("gap", 60, 20, 0, $maxWidth, 767.98);
+
+    @media (max-width: $mobile) {
+      flex-direction: column;
+      align-items: flex-start;
+      margin-top: 45px;
+      margin-left: 20px;
+    }
+  }
+  &__item {
+  }
+  &__link {
+    display: inline-block;
+    font-size: toRem(24);
+    @include adaptiveValue("font-size", 24, 16, 0, $containerWidth, 767.98);
+    font-weight: 600;
+    @media (any-hover: hover){
+      &:hover{
+        text-decoration: underline;
+      }
+    }
+  }
+}
+.icon {
+  &-menu {
+  }
+}

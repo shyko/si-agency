@@ -1,0 +1,52 @@
+// Consult form
+.consult-form {
+  &__wrapper {
+    background-color: $lightGrey;
+    @include adaptiveValue("padding-bottom", 146, 34);
+  }
+  &__container {
+    form {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: toRem(20);
+      input {
+        border-radius: 10px;
+        border: 1px solid #868786;
+        padding: toRem(16) toRem(24);
+        width: 100%;
+        background-color: #FFFFFF;
+      }
+      div:last-child {
+        text-align: end;
+      }
+
+      @media (max-width:$mobile){
+        grid-template-columns: 1fr;
+        div:last-child {
+          text-align: center;
+        }
+      }
+
+      button{
+        @media (max-width:$tablet){
+          padding: toRem(25) toRem(20);
+        }
+      }
+    }
+  }
+  &__header {
+    text-align: center;
+    padding-top: toRem(101);
+    padding-bottom: toRem(64);
+    @include adaptiveValue("padding-top", 101, 42);
+    @include adaptiveValue("padding-bottom", 64, 28);
+  }
+  &__title {
+    color: $mainColor;
+    font-family: $fontFamily;
+    font-weight: 700;
+    text-transform: uppercase;
+    @include adaptiveValue("font-size", 36, 20);
+  }
+}
+// End Consult form
