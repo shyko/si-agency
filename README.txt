@@ -2,7 +2,7 @@ Requirements:
  - node 18
 
  Installation:
-  - npm @extend %ic;
+  - npm i;
 
   Running:
    - npm run dev
