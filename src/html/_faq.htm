@@ -1,0 +1,76 @@
+<div class="faq-form-block margin-90">
+    <div class="faq-form-block__container">
+        <div class="faq-form-block-top">
+            <h2 class="big-symbols text-align-center margin-30">Поширені запитання:</h2>
+        </div>
+    </div>
+    <div class="faq-form-block__container">
+        <div class="faq-form-block-content">
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Які житлові умови доступні для іноземних студентів і як їх можна організувати?</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p>
+                            Для іноземних студентів в Німеччині доступні різні варіанти житла, такі як гуртожитки, студентські гуртожитки, оренда квартир або спільне житло з іншими студентами. Житло можна знайти через університетські служби, онлайн платформи, агенції нерухомості або шляхом звернення до студентських організацій. Важливо розпочати пошук житла заздалегідь, особливо у великих університетських містах.
+                        </p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Як можна отримати додаткову допомогу або консультації під час навчання?</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p>
+                            Університети зазвичай надають консультаційні послуги через спеціальні відділи або студентські офіси, а також організовують семінари та воркшопи.
+                        </p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Як довго зазвичай триває процес вступу та коли розпочинається навчання?</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p>
+                            Процес вступу може тривати від кількох тижнів до кількох місяців. Більшість навчальних програм починаються у вересні або жовтні.
+                        </p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Які є можливості для подальшого навчання чи роботи в Німеччині після закінчення університету?</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p>
+                            Випускники можуть продовжити навчання на магістерських програмах, отримати роботу за спеціальністю або пройти практику через програми стажування.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const faqItems = document.querySelectorAll('.faq-item');
+
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+
+            question.addEventListener('click', () => {
+                // Закрыть все открытые элементы
+                faqItems.forEach(faq => {
+                    if (faq !== item) {
+                        faq.classList.remove('open');
+                    }
+                });
+
+                // Переключить класс open у текущего элемента
+                item.classList.toggle('open');
+            });
+        });
+    });
+</script>
