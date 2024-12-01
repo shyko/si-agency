@@ -1117,6 +1117,8 @@ form {
 .appointment-form-block {
   overflow: hidden;
   margin-top: toRem(150);
+  line-height: 120%;
+  @media (max-width: 991px) {margin-top: toRem(100);}
 
   &.appointment-form-block-reverse {
     .appointment-form-background {
@@ -1128,14 +1130,12 @@ form {
   &.appointment-form-block-gray {
     .appointment-form-background {
       background: #F5F5F5;
-      //border-radius: 100px 0 0 0!important;
     }
   }
   //language page
   &.appointment-form-block-green {
     .appointment-form-background {
       background: #D8E7E0;
-      //border-radius: 100px 0 0 0!important;
     }
   }
 
@@ -1145,9 +1145,14 @@ form {
     padding-bottom: 95px;
     @media (max-width: 768px) {width: 80%;margin: 0 auto}
 
+    h2{line-height: 110%;}
     h3{
       align-content: center;
       text-align: center;
+
+      @media (max-width: 576px) {
+        text-align: left;
+      }
     }
   }
 
@@ -1253,10 +1258,13 @@ form {
       padding: 40px;
       margin: 75px 0;
       font-size: 18px;
+      overflow: hidden;
 
       h4 {
         margin: 30px 10rem 60px 10rem;
         line-height: 110%;
+
+        @media (max-width: 768px) {margin: 30px 0 60px 0;}
       }
 
       .services-block-content-item-img-with-text {
@@ -1264,8 +1272,34 @@ form {
         margin-top: 26px;
         display: grid;
         grid-template-columns: 0fr 1fr;
+        @media (max-width: 768px) {
+          display: block;
+        }
+        ul {
+          padding-left: 20px;
+          li {
+            list-style: disc;
+          }
+        }
 
-        .services-block-content-item-img-with-text_img {margin-right: 30px;}
+        @media (max-width: 576px) {
+          >div {
+            width: 100%;
+            img {
+              width: 100%;
+            }
+          }
+        }
+
+
+        .services-block-content-item-img-with-text_img {
+          margin-right: 30px;
+          @media (max-width: 768px) {
+            img:nth-of-type(2){
+              display: none;
+            }
+          }
+        }
         .services-block-content-item-img-with-text_text {
           align-content: space-evenly;
           >div {
@@ -1289,12 +1323,23 @@ form {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
 
+        @media (max-width: 768px) {
+          display: block;
+        }
+
         >div {
           width: 62%;
           padding-left: 46px;
           background-size: 67px, auto, cover;
           background-repeat: no-repeat;
           padding-top: 38px;
+          @media (max-width: 768px) {
+            padding-left: 33px;
+            background-size: 49px, auto, cover;
+            width: 85%;
+            margin: 0 auto;
+            margin-bottom: 30px;
+          }
 
           &:nth-child(1){background-image: url("@img/1.png");}
           &:nth-child(2){background-image: url("@img/2.png");}
@@ -1309,9 +1354,12 @@ form {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         margin-top: 60px;
+        @media (max-width: 991px) {margin-top: 35px;}
+        @media (max-width: 768px) {display: block;}
 
         >div {
           width: 70%;
+          @media (max-width: 768px) {margin: 95px auto;width: 90%;}
 
           &:nth-of-type(1) {
             position: relative;
@@ -1327,6 +1375,21 @@ form {
               left: 74%;
               width: 174px;
               height: 100px;
+
+              @media (max-width: 991px) {
+                top: -21%;
+              }
+              @media (max-width: 920px) {
+                width: 125px;
+                top: -16%;
+              }
+              @media (max-width: 768px) {
+                transform: rotate(135deg);
+                top: 96%;
+                left: 34%;
+                width: 120px;
+                height: 94px;
+              }
             }
           }
 
@@ -1344,6 +1407,22 @@ form {
               left: 74%;
               width: 174px;
               height: 100px;
+
+              @media (max-width: 991px) {
+                top: -21%;
+
+              }
+              @media (max-width: 920px) {
+                width: 125px;
+                top: -16%;
+              }
+              @media (max-width: 768px) {
+                transform: rotate(135deg);
+                top: 96%;
+                left: 34%;
+                width: 120px;
+                height: 94px;
+              }
             }
           }
 
@@ -1362,9 +1441,16 @@ form {
       .services-block-content-item-data-var3 {
         display: grid;
         grid-template-columns: 1fr 1fr;
+        @media (max-width: 768px) {display: block;}
 
         >div {
           width: 70%;
+          @media (max-width: 768px) {width: 100%;}
+          @media (max-width: 576px) {
+            img {
+              display: block!important;
+            }
+          }
 
           p, ul, li {
             padding-bottom: 10px;
@@ -1380,9 +1466,11 @@ form {
       .services-block-content-item-data-var4 {
         display: grid;
         grid-template-columns: 1fr 1fr;
+        @media (max-width: 768px) {display: block;}
 
         >div {
           width: 70%;
+          @media (max-width: 768px) {width: 100%;}
 
           p, ul, li {
             padding-bottom: 10px;
@@ -1398,9 +1486,11 @@ form {
       .services-block-content-item-data-var5 {
         display: grid;
         grid-template-columns: 1fr 1fr;
+        @media (max-width: 768px) {display: block;}
 
         >div {
           width: 70%;
+          @media (max-width: 768px) {width: 100%;}
 
           p, ul, li {
             padding-bottom: 10px;
@@ -1418,8 +1508,16 @@ form {
         margin: 60px 0;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
+        @media (max-width: 768px) {display: block;}
 
         >div {
+          @media (max-width: 768px) {
+            width: 100%;
+            background-size: 33px, auto, cover;
+            overflow: hidden;
+            min-height: 50px;
+            margin-bottom: 31px;
+          }
           width: 64%;
           padding-left: 75px;
           background-size: 64px, auto, cover;
@@ -1447,11 +1545,14 @@ form {
         margin: 60px auto;
         display: grid;
         grid-template-columns: 1fr 1fr;
+        @media (max-width: 768px) {display: block;}
 
         .services-block-content-item-data-var7-left,
         .services-block-content-item-data-var7-right {
           margin: 0 22px;
           >div {
+
+            @media (max-width: 768px) {width: 100%;margin-bottom: 15px}
             min-height: 120px;
             padding-left: 75px;
             padding-bottom: 20px;
@@ -1515,6 +1616,7 @@ form {
       .services-block-content-item-footer{
         display: grid;
         grid-template-columns: 1fr 1fr;
+        @media (max-width: 768px) {display: block;text-align: center;}
 
         >div{
           &:first-child{
@@ -1528,7 +1630,21 @@ form {
 
           .button {
             margin: 0 10px;
+            @media (max-width: 1274px) {
+              margin: 5px auto;
+              width: 100%;
+              align-content: center;
+              display: block;
+            }
+            @media (max-width: 768px) {
+              width: 100%;
+              text-align: center;
+              margin: 15px auto;
+
+            }
           }
+
+          @media (max-width: 768px) {width: 100%}
         }
       }
     }
@@ -1539,6 +1655,7 @@ form {
 
 //FAQ block
 .faq-form-block {
+  @media (max-width: 1300px) {width: 90%;margin: 90px auto;}
   .faq-form-block-content {
     max-width: 1070px;
     margin: 0 auto;
@@ -1600,18 +1717,16 @@ form {
 .text-with-image-block {
   margin-top: toRem(150);
   line-height: 130%;
-  //@media (max-width: 991px) {
-  //  height: auto;
-  //}
+  @media (max-width: 991px) {margin-top: toRem(50);}
 
     .text-with-image-block__container {
       .grid-50percent {
         display: grid;
         grid-template-columns: 1fr 1fr;
 
-        @media (max-width: 991px) {
-          grid-template-columns: 1fr;
-        }
+        //@media (max-width: 991px) {
+        //  grid-template-columns: 1fr;
+        //}
         @media (max-width: 576px) {
           display: block;
         }
@@ -1628,14 +1743,34 @@ form {
             width: 100%;
           }
         }
+        @media (max-width: 768px) {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+          text-align: center;
+          margin: 0;
+
+          &.vertical-column-reverse {
+            flex-direction: column-reverse;
+          }
+        }
 
         .grid-50percent-left, .grid-50percent-right {
           display: table;
           width: 450px;
           margin: 0 auto;
+
+          @media (max-width: 991px) {
+            width: 90%;
+            margin: 20px 0;
+          }
+
           >div {
             display: table-cell;
             vertical-align: middle;
+
+
             span, h4 {
 
               margin-bottom: 16px;
@@ -1647,6 +1782,8 @@ form {
         p {
           display: table-cell;
           vertical-align: middle;
+          @media (max-width: 991px) {display: block!important;margin: 10px 0
+          }
         }
 
 
@@ -1682,6 +1819,8 @@ form {
 .three-circles-block {
   margin-top: toRem(150);
   line-height: 130%;
+  @media (max-width: 991px) {margin-top: toRem(50);}
+
   .three-circles-block__container {
     .three-circles-block-top {
       width: 60%;
@@ -1692,7 +1831,11 @@ form {
       margin-top: toRem(75);
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
+      @media (max-width: 768px) {display: block;}
+
       >div {
+        width: 70%;
+        @media (max-width: 768px) {width: 100%;margin-bottom: 20px; font-weight: 600;}
         text-align: center;
         img {
           width: 100%;
